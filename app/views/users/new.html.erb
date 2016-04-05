@@ -1,0 +1,15 @@
+<% if current_user %>
+  <div class="center">
+    <h1>
+      <%= "Welcome #{current_user.name} AKA #{current_user.uid}"%><br>
+    </h1>
+      <%= image_tag "https://d21ii91i3y6o6h.cloudfront.net/gallery_images/from_proof/5478/large/1431127911/ship-it-squirrel.png" %>
+  </div>
+  <%= link_to "Signout", signout_path %>
+<% else %>
+  <div class="center">
+    <a class="btn btn-block btn-social btn-lg btn-github" href="/auth/github">
+      <span class="fa fa-github"></span> Sign in with GitHub
+    </a>
+  </div>
+<% end %>
